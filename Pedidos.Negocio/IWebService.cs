@@ -5,12 +5,12 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
-
+using Pedidos.AccesoDatos;
 namespace Pedidos.Negocio
 {
     // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de interfaz "IService1" en el código y en el archivo de configuración a la vez.
     [ServiceContract]
-    public interface IService1
+    public interface IWebService
     {
 
         [OperationContract]
@@ -19,6 +19,8 @@ namespace Pedidos.Negocio
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
+        [OperationContract]
+        List<Service1> obtenerProductos();
         // TODO: agregue aquí sus operaciones de servicio
     }
 
